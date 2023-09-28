@@ -5,10 +5,6 @@ import core.stdc.config;
 import std.traits;
 import core.stdc.stdio: printf;
 
-@nogc nothrow extern (C)
-{
-
-
 enum NNG_MAJOR_VERSION = 1;
 enum NNG_MINOR_VERSION = 6;
 enum NNG_PATCH_VERSION = 0;
@@ -171,6 +167,9 @@ enum nng_flag {
 @safe:
 T* ptr(T)(T[] arr) { return arr.length == 0 ? null : &arr[0]; }
 
+
+@nogc nothrow extern (C)
+{
 
 // ------------------------------------- typedefs
 
